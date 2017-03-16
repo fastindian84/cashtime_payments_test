@@ -1,0 +1,62 @@
+<%= form_for(app_request) do |f| %>
+  <% if app_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(app_request.errors.count, "error") %> prohibited this app_request from being saved:</h2>
+
+      <ul>
+      <% app_request.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_name %>
+    <%= f.text_field :user_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label "app id" %>
+    <%= f.text_field :app_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :public_key %>
+    <%= f.text_field :public_key %>
+  </div>
+
+  <div class="field">
+    <%= f.label :order_uid %>
+    <%= f.text_field :order_uid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_uid %>
+    <%= f.text_field :user_uid %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class AppRequest < ApplicationRecord
+end

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @app_request.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @app_request.description %>
+</p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @app_request.user_name %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @app_request.image_url %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @app_request.amount %>
+</p>
+
+<p>
+  <strong>Order uid:</strong>
+  <%= @app_request.order_uid %>
+</p>
+
+<p>
+  <strong>User uid:</strong>
+  <%= @app_request.user_uid %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @app_request.status %>
+</p>
+
+<p>
+  <strong>Response:</strong>
+  <%= @app_request.response %>
+</p>
+
+<%= link_to 'Edit', edit_app_request_path(@app_request) %> |
+<%= link_to 'Back', app_requests_path %>
