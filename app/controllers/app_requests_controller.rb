@@ -39,10 +39,13 @@ class AppRequestsController < ApplicationController
     if tm_response.success? && @app_request.save
       redirect_to tm_response.body
     else
+      errors = JSON.parse(tm_response.body)['errors']
+      errors.each do |e|
+        @app_request.errors.add(:base, e)
+      end
 
       respond_to do |format|
         format.html {
-
           render :new, error: tm_response.body
         }
       end
