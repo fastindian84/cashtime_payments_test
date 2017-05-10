@@ -9,4 +9,4 @@
 development:
   cashtime_payments_url: 'http://localhost:3001/api/v1/enterprise/application_payments'
 production:
-  cashtime_payments_url: 'http://timecoin.rademade.com/api/v1/enterprise/application_payments'
+  cashtime_payments_url: 'http://test.cashtime.io/api/v1/enterprise/application_payments'
